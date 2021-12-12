@@ -51,14 +51,14 @@ class Groups
      * @ORM\Column(type="uuid", unique=true)
      * @ORM\GeneratedValue(strategy="CUSTOM")
      * @ORM\CustomIdGenerator("doctrine.uuid_generator")
-     * @GroupsAnnotation({"groups:read", "groups:item:read"})
+     * @GroupsAnnotation({"groups:read", "groups:item:read", "centers:read"})
      * @ApiProperty(writable=false)
      */
     private Uuid $id;
 
     /**
      * @ORM\Column(type="text")
-     * @GroupsAnnotation({"groups:read", "groups:item:read"})
+     * @GroupsAnnotation({"groups:read", "groups:item:read", "centers:read"})
      */
     private string $name;
 

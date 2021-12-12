@@ -70,7 +70,7 @@ class Centers
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Representations", inversedBy="centers")
      * @ORM\JoinColumn(nullable=false)
-     * @Groups({"centers:item:read"})
+     * @Groups({"centers:item:read", "centers:read"})
      * @ApiProperty(fetchEager=true)
      */
     private Representations $representation;
@@ -79,7 +79,7 @@ class Centers
      * Группа
      * @ORM\ManyToOne(targetEntity="App\Entity\Groups", inversedBy="centers")
      * @ORM\JoinColumn(nullable=false)
-     * @Groups({"centers:item:read"})
+     * @Groups({"centers:item:read", "centers:read"})
      * @ApiProperty(fetchEager=true)
      */
     private GroupsEntity $group;

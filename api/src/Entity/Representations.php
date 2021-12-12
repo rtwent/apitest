@@ -61,13 +61,13 @@ class Representations
      * @ORM\GeneratedValue(strategy="CUSTOM")
      * @ORM\CustomIdGenerator("doctrine.uuid_generator")
      * @ApiProperty(writable=false)
-     * @Groups({"representations:read", "representations:read:dropdown", "representations:item:read", "centers:item:read"})
+     * @Groups({"representations:read", "representations:read:dropdown", "representations:item:read", "centers:item:read", "centers:read"})
      */
     private Uuid $id;
 
     /**
      * @ORM\Column(type="text")
-     * @Groups({"representations:read", "representations:read:dropdown"})
+     * @Groups({"representations:read", "representations:read:dropdown", "centers:read"})
      */
     private string $name;
 
